@@ -1,0 +1,95 @@
+@font-face {
+    font-family: "Clock";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/Clock.eot?") format("eot"), url("../fonts/Clock.ttf") format("truetype"), url("../fonts/Clock.woff") format("woff"), url("../fonts/Clock.otf") format("otf"); }
+
+body {
+    margin: 0;
+    padding: 0; }
+
+.cl-container {
+    width: 80%;
+    height: 100vh;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto; }
+
+.cl-row {
+    width: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+
+.cl-block--wrapp {
+    width: 200px; }
+.cl-block--wrapp .cl-title {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    font-family: "Clock";
+    font-size: 30px; }
+.cl-block--wrapp .cl-title--hour {
+    color: #851775; }
+.cl-block--wrapp .cl-title--minute {
+    color: #944586; }
+.cl-block--wrapp .cl-title--second {
+    color: #BC537F; }
+
+.cl-block {
+    position: relative;
+    width: 200px;
+    height: 200px; }
+.cl-block svg {
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    position: absolute;
+    width: 200px;
+    height: 200px; }
+.cl-block svg circle {
+    stroke-width: 9px;
+    stroke-dasharray: 615px;
+    fill: transparent; }
+.cl-block .cl-data {
+    position: relative;
+    width: inherit;
+    height: inherit;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-family: 'Clock';
+    font-size: 80px;
+    z-index: 2; }
+
+#hour-bg circle {
+    stroke: #9D188D; }
+
+#hour {
+    color: #851775; }
+
+#minute-bg circle {
+    stroke: #C14EB3; }
+
+#minute {
+    color: #944586; }
+
+#second-bg circle {
+    stroke: #eb65a0; }
+
+#second {
+    color: #BC537F; }

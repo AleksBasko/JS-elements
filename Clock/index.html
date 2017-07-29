@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clock SVG</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div class="cl-container">
+        <div class="cl-row">
+            <div class="cl-block--wrapp">
+                <div class="cl-block">
+                    <svg id="hour-bg" version="1.1" viewbox="0 0 200 200" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                  <circle r="95" cx="100" cy="100"></circle>
+                </svg>
+                    <div class="cl-data" id="hour"></div>
+                </div>
+                <div class="cl-title cl-title--hour">hour</div>
+            </div>
+            <div class="cl-block--wrapp">
+                <div class="cl-block">
+                    <svg id="minute-bg" version="1.1" viewbox="0 0 200 200" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                  <circle r="95" cx="100" cy="100"></circle>
+                </svg>
+                    <div class="cl-data" id="minute"></div>
+                </div>
+                <div class="cl-title cl-title--minute">minute</div>
+            </div>
+            <div class="cl-block--wrapp">
+                <div class="cl-block">
+                    <svg id="second-bg" version="1.1" viewbox="0 0 200 200" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                  <circle r="95" cx="100" cy="100"></circle>
+                </svg>
+                    <div class="cl-data" id="second"></div>
+                </div>
+                <div class="cl-title cl-title--second">second</div>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
