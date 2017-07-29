@@ -58,6 +58,7 @@ body {
 .cl-block svg circle {
     stroke-width: 9px;
     stroke-dasharray: 615px;
+    stroke-dashoffset: 615px;
     fill: transparent; }
 .cl-block .cl-data {
     position: relative;
