@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+#input-color {
+  display: none; }
+
+#image path {
+  stroke-width: 1px;
+  stroke: #ddd;
+  cursor: url("../image/cursor.png"), auto; }
