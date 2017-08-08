@@ -42,10 +42,7 @@ body {
   border-radius: 4px;
   margin-right: 14px;
   outline-width: 0;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  padding-left: 5px;
-  padding-right: 5px; }
+  padding: 2px 5px;}
 
 .at-header__label {
   margin-right: 8px; }
@@ -56,10 +53,7 @@ body {
   background-color: #eaeaea;
   outline-width: 0;
   border-radius: 4px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  padding-left: 8px;
-  padding-right: 8px; }
+  padding: 2px 8px; }
 
 .at-animate__list {
   padding: 0;
@@ -68,5 +62,6 @@ body {
 
 .at-animate__item {
   display: inline-block;
+  text-align: center;
   line-height: 1;
-  min-width: 30px; }
+  min-width: 24px; }
