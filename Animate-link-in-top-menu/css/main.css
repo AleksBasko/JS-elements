@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #343c55;
+  color: #ddeef0;
+  font-family: arial, sans-serif; }
+
+.tm-container {
+  width: 80%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-top: 90px; }
+
+.tm-top-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80px;
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #485274;
+  box-shadow: 0 20px 22px 5px #343c55;
+  z-index: 2; }
+
+.tm-top-menu__link {
+  position: relative;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+  color: #ddeef0;
+  text-decoration: none;
+  transition: width .2s; }
+  .tm-top-menu__link:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    width: 0;
+    background-color: #fff; }
+  .tm-top-menu__link:hover:before {
+    width: 100%; }
+
+.tm-section {
+  position: relative; }
+
+.tm-section--active:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 4px;
+  height: 100%; }
+
+p {
+  text-align: justify; }
+
+.tm-home.tm-top-menu__link {
+  color: #ed89e9; }
+
+.tm-home:after {
+  background-color: #ed89e9; }
+
+.tm-home:before {
+  background-color: #ed89e9;
+  transition: width .5s;
+  width: 100%; }
+
+.tm-portfolio.tm-top-menu__link {
+  color: #5ed980; }
+
+.tm-portfolio:after {
+  background-color: #5ed980; }
+
+.tm-portfolio:before {
+  background-color: #5ed980;
+  transition: width .5s;
+  width: 100%; }
+
+.tm-images.tm-top-menu__link {
+  color: #fa6f7a; }
+
+.tm-images:after {
+  background-color: #fa6f7a; }
+
+.tm-images:before {
+  background-color: #fa6f7a;
+  transition: width .5s;
+  width: 100%; }
+
+.tm-services.tm-top-menu__link {
+  color: #3bccdd; }
+
+.tm-services:after {
+  background-color: #3bccdd; }
+
+.tm-services:before {
+  background-color: #3bccdd;
+  transition: width .5s;
+  width: 100%; }
+
+.tm-settings.tm-top-menu__link {
+  color: #f8853d; }
+
+.tm-settings:after {
+  background-color: #f8853d; }
+
+.tm-settings:before {
+  background-color: #f8853d;
+  transition: width .5s;
+  width: 100%; }
+
+.tm-contact.tm-top-menu__link {
+  color: #f6e762; }
+
+.tm-contact:after {
+  background-color: #f6e762; }
+
+.tm-contact:before {
+  background-color: #f6e762;
+  transition: width .5s;
+  width: 100%; }
