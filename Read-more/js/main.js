@@ -1,5 +1,4 @@
 
-
 window.onload = function () {
     let blockClass = 'rm-paragraph';
     let rmContentClass = 'rm-block__content';
