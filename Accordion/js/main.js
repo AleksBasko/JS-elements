@@ -16,7 +16,6 @@ function accord(btnName, closeName, openName) {
                 vertBtn[activeIndex].parentNode.classList.add(closeClass);
             }
             activeIndex = i;
-            console.log(activeIndex);
         })
     }
 }
