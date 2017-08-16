@@ -4,12 +4,20 @@ window.onload = function () {
         {'country': 'Germany', 'capital': 'Berlin'},
         {'country': 'Ireland', 'capital': 'Dublin'},
         {'country': 'Italy', 'capital': 'Rome'},
-        {'country': 'Sweden', 'capital': 'Stockholm'}];
+        {'country': 'Sweden', 'capital': 'Stockholm'},
+        {'country': 'United Kingdom', 'capital': 'London'},
+        {'country': 'France', 'capital': 'Paris'},
+        {'country': 'Austria', 'capital': 'Vienna'},
+        {'country': 'Spain', 'capital': 'Madrid'},
+        {'country': 'Switzerland', 'capital': 'Bern'},
+        {'country': 'Netherlands', 'capital': 'Amsterdam'}];
     let StartTest = new Testing(block, quest);
     StartTest.init(quest);
 };
 
 let Testing = function (id, arr) {
+    // Узнаем длину массива тестов, для проверки првильных ответов
+    this.testLangth = arr.length;
     let mainArray = arr;
 
     this.counter = 0;
@@ -100,13 +108,21 @@ let Testing = function (id, arr) {
 
             let newTitle = id.querySelector('.ts-question__item');
             let countLine = document.createElement('span');
-            countLine.innerHTML = 'Correct answers ' + this.counter;
-            newTitle.innerHTML = 'Well done!';
+
+            if(this.counter == this.testLangth) {
+                newTitle.classList.add('ts-question__item--success');
+                countLine.innerHTML = 'Correct answers ' + this.counter;
+                newTitle.innerHTML = 'Well done!';
+            }
+            else {
+                newTitle.classList.add('ts-question__item--error');
+                countLine.innerHTML = 'Correct answers ' + this.counter;
+                newTitle.innerHTML = 'a little bit more...';
+            }
+
             newTitle.appendChild(countLine);
             let answerBlock = id.querySelector('.ts-answer__block');
-            answerBlock
-
-
+            answerBlock.remove();
         }
     };
 };
