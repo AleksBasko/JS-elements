@@ -1,0 +1,5 @@
+data = '[
+{'country': 'Germany', 'capital': 'Berlin'},
+{'country': 'Ireland', 'capital': 'Dublin'},
+{'country': 'Italy', 'capital': 'Rome'},
+{'country': 'Sweden', 'capital': 'Stockholm'}]';
