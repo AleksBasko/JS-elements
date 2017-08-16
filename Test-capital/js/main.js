@@ -117,7 +117,7 @@ let Testing = function (id, arr) {
             else {
                 newTitle.classList.add('ts-question__item--error');
                 countLine.innerHTML = 'Correct answers ' + this.counter;
-                newTitle.innerHTML = 'a little bit more...';
+                newTitle.innerHTML = 'A little bit more...';
             }
 
             newTitle.appendChild(countLine);
