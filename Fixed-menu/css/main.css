@@ -18,17 +18,25 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  align-items: center;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between; }
 
 .header__top-wrap {
-  height: 79px; }
+  height: 96px; }
+
+.header__logo {
+  color: #fff;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 46px;
+}
 
 .header__top {
   width: 100%;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   background-color: #154054; }
 
 .header__bottom {
