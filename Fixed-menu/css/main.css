@@ -24,7 +24,7 @@ body {
           justify-content: space-between; }
 
 .header__top-wrap {
-  height: 96px; }
+  height: 81px; }
 
 .header__logo {
   color: #fff;
@@ -35,7 +35,7 @@ body {
 
 .header__top {
   width: 100%;
-  padding-top: 30px;
+  padding-top: 15px;
   padding-bottom: 10px;
   background-color: #154054; }
 
@@ -64,7 +64,13 @@ body {
   color: #fff;
   text-decoration: none;
   font-size: 14px;
-  font-weight: bold; }
+  font-weight: bold;
+  transition: color .3s;
+}
+
+.nav__link:hover {
+  color: #ff3c20;
+}
 
 .header__btn {
   color: #fff;
@@ -87,16 +93,16 @@ body {
   width: 50%; }
 
 .header__search-input {
-  position: relative;
   border: none;
-  padding: 0;
   width: 75%;
   height: 40px;
   background: #fff;
   display: block;
   vertical-align: top;
   font-size: 14px;
-  border-radius: 3px 0 0 3px; }
+  border-radius: 3px 0 0 3px;
+  padding: 0 15px;
+}
 
 .header__search-btn {
   font-size: 14px;
