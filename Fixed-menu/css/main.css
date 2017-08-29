@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f3f8fc;
+  font-family: Verdana, Tahoma, sans-serif; }
+
+.header__container {
+  width: 80%;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto; }
+
+.header-flex {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.header__top-wrap {
+  height: 79px; }
+
+.header__top {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #154054; }
+
+.header__bottom {
+  padding-top: 10px;
+  padding-bottom: 30px;
+  background-color: #154054; }
+
+.nav__list {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+.nav__item {
+  margin-right: 17px; }
+  .nav__item:last-child {
+    margin-right: 0; }
+
+.nav__link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold; }
+
+.header__btn {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 7px 25px;
+  line-height: 26px;
+  border-radius: 3px;
+  position: relative;
+  background: #ff3c20;
+  cursor: pointer; }
+
+.header__search {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 50%; }
+
+.header__search-input {
+  position: relative;
+  border: none;
+  padding: 0;
+  width: 75%;
+  height: 40px;
+  background: #fff;
+  display: block;
+  vertical-align: top;
+  font-size: 14px;
+  border-radius: 3px 0 0 3px; }
+
+.header__search-btn {
+  font-size: 14px;
+  border: none;
+  width: 25%;
+  height: 40px;
+  line-height: 40px;
+  right: 0;
+  top: 0;
+  padding: 0;
+  display: block;
+  border-radius: 0 3px 3px 0;
+  color: #fff;
+  text-transform: uppercase;
+  background: #ff3c20;
+  cursor: pointer; }
+
+.fixed-menu {
+  position: fixed;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%); }
+  .fixed-menu.fixed-menu--active {
+    transition: -webkit-transform .4s;
+    transition: transform .4s;
+    transition: transform .4s, -webkit-transform .4s;
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0); }
+
+.container {
+  width: 75%;
+  margin: 0 auto 100px;
+  padding-top: 30px;
+  text-align: justify; }
