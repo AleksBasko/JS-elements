@@ -92,6 +92,18 @@ body {
           justify-content: space-between;
   width: 50%; }
 
+.header__enter {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.header__market {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+}
+
 .header__search-input {
   border: none;
   width: 75%;
