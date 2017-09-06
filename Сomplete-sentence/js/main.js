@@ -34,7 +34,7 @@ window.onload = function() {
             //получаем текст английского свойства
             let str = obj.eng;
 
-        // создаем пустые массивы
+            // создаем пустые массивы
             // для рандомного набора чисел
             let randArr = [];
             // и для пербора строки с англ текстом в массив
@@ -93,8 +93,6 @@ window.onload = function() {
                     this.answ.appendChild(point);
                 }
             }
-
-
         };
 
 
@@ -123,7 +121,6 @@ window.onload = function() {
                 let strfan = checkArr.join('');
                 if (strfan === obj.eng) {
                     alert('You are best!');
-
                 }
                 else {
                     alert('noo((');
@@ -150,5 +147,38 @@ window.onload = function() {
     let startSlice = new sliceString('block-text');
     //вызываем метод init()
     startSlice.init();
-
 };
+
+
+// //запрет ввода
+//
+// //форма в pug
+// //        form
+// // input(type="text" pattern="[0-9]{3}").super
+// // input(type="submit" placeholder="submit")
+//
+// //функуция запрета
+// window.onload = function() {
+//
+// //находим инпут в который вводим значение
+//     var input = document.querySelector('.super');
+//
+// //получаем его значение(value)
+//     var value = input.value;
+//
+// //навешиваем оброботчик событий на это инпут
+//     input.addEventListener('input', onInput);
+//
+//
+// //используем функцию
+//     function onInput(e){
+// //отслеживаем объект который вызвал событие
+//         var newValue = e.target.value;
+// //проверяем через маску регулярного выражения если введенные данные соответствуют маске то присвоиваем их в value
+//         if( newValue.match(/[^a-zA-Z]/g)) {
+//             input.value = value;
+//             return;
+//         }
+//         value = newValue;
+//     }
+// };
