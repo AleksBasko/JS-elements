@@ -4,7 +4,7 @@ window.onload = function() {
     // объект со значениями
     let obj = {
         rus: 'Привет! Меня зовут Супермен!',
-        eng: 'Hello! My name is Superman!'
+        eng: 'Superman!'
     };
 
     //Инициализируем конструктор объекта в параметры принимаем id блока в котором все будет происходить
@@ -30,8 +30,6 @@ window.onload = function() {
 
         // метод объекта в котором мы вставляем английский вариант с заменой букв на импуты
         this.addEmpt = function() {
-            // переделать на ссылку на свойтсво объекта
-            let questAnswer = this.answ;
 
             //получаем текст английского свойства
             let str = obj.eng;
@@ -81,7 +79,7 @@ window.onload = function() {
                     // добавляем класс
                     inp.classList.add("small-input");
                     // и выводим в блок с вопросом
-                    questAnswer.appendChild(inp);
+                    this.answ.appendChild(inp);
                     //добавляем число в массив свойство объекта что бы сохранить индексы замененных элементов
                     this.answerArr.push(j);
                 }
@@ -92,7 +90,7 @@ window.onload = function() {
                     // в дата атрибут context
                     point.setAttribute("data-context", strArr[j]);
                     point.innerText = strArr[j];
-                    questAnswer.appendChild(point);
+                    this.answ.appendChild(point);
                 }
             }
 
@@ -115,14 +113,14 @@ window.onload = function() {
                 for(let i=0; i <answspan.length; i++) {
                     checkArr.push(answspan[i].getAttribute("data-context"));
                 }
-                for(let j=0; j <answInput.length; j++) {
+                for(let j=0; j < answInput.length; j++) {
                     checkInput.push(answInput[j].value);
                 }
                 for(let k=0; k < _this.answerArr.length; k++) {
                     checkArr.splice(_this.answerArr[k], 0, checkInput[k]);
                 }
 
-                let strfan = checkArr.join();
+                let strfan = checkArr.join('');
                 if (strfan === obj.eng) {
                     alert('You are best!');
 

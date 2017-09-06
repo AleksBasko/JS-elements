@@ -8,7 +8,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-weight: normal;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .container {
@@ -32,8 +32,22 @@ body {
   line-height: 30px;
 }
 
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 5px 7px;
+  cursor: pointer;
+}
+
 .small-input {
-  width: 15px;
+  width: 18px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  color: navy;
+  border-bottom: 1px solid blue;
+  margin-right: 3px;
+  margin-left: 3px;
 }
 
 
