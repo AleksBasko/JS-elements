@@ -1,7 +1,7 @@
-var popupObj = function() {
+let popupObj = function() {
     this.activeModal = false;
     this.modelOpen = false;
-    var _this = this;
+    let _this = this;
 
     document.addEventListener('click', function(e) {
         if(_this.modelOpen) {
@@ -9,26 +9,25 @@ var popupObj = function() {
         }
     });
 
-
     this.clickBtn = function() {
-        var _this = this;
-        var btn = document.querySelectorAll('.start-modal-btn');
-        for(var i=0; i < btn.length; i++) {
+        let _this = this;
+        let btn = document.querySelectorAll('.start-modal-btn');
+        for(let i=0; i < btn.length; i++) {
             btn[i].addEventListener('click', function() {
-                var popupId = this.getAttribute('data-modalId');
+                let popupId = this.getAttribute('data-modalId');
                 _this.showPopup(popupId);
             })
         }
     };
 
     this.showPopup = function(id) {
-        var popupWind = document.getElementById(id);
+        let popupWind = document.getElementById(id);
         this.activeModal = popupWind;
 
         popupWind.classList.remove('modal--hide');
         popupWind.classList.add('modal--active');
 
-        var bgBlock = document.createElement('div');
+        let bgBlock = document.createElement('div');
         bgBlock.classList.add('modal__bg');
         popupWind.insertBefore(bgBlock, popupWind.firstChild);
 
@@ -36,10 +35,10 @@ var popupObj = function() {
     };
 
     this.closePopup = function(even) {
-        var _this = this;
+        let _this = this;
 
-        var clickBlock = even.target;
-        var isModalWindow = false;
+        let clickBlock = even.target;
+        let isModalWindow = false;
 
         while (clickBlock.tagName !== 'HTML' ) {
 
@@ -64,6 +63,6 @@ var popupObj = function() {
 
 
 window.onload = function() {
-    var popup = new popupObj();
+    let popup = new popupObj();
     popup.init();
 };
