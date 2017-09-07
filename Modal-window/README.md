@@ -1,3 +1,3 @@
-<h2>JS elements</h2>
+<h3>Modal window</h3>
 
-<a href="http://dev.aleksbasko.com/">**http://dev.aleksbasko.com/**</a>
+<a href="http://dev.aleksbasko.com/Modal-window/index.html">**http://dev.aleksbasko.com/Modal-window/index.html**</a>
