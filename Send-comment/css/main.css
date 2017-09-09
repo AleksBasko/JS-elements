@@ -24,7 +24,7 @@ body {
     height: 400px;
     overflow-x: auto;
     padding: 10px 0;
-    border: 1px solid #9e3aff;
+    border: 1px solid #b2c1dc;
     border-radius: 5px;
 }
 
@@ -50,7 +50,7 @@ body {
     height: 100px;
     margin-top: 15px;
     padding: 15px 20px;
-    border: 2px solid #a850fd;
+    border: 2px solid #508ffd;
     border-radius: 4px;
     text-align: left;
     overflow-x: auto;
@@ -103,9 +103,9 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 5px;
-    background-color: #f4caff;
+    background-color: #e4edf9;
     border-radius: 5px;
-    border: 2px solid #af78bd;
+    border: 2px solid #788ebd;
     cursor: default;
 }
 
