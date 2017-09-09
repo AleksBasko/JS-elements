@@ -24,7 +24,7 @@ body {
     height: 400px;
     overflow-x: auto;
     padding: 10px 0;
-    border: 1px solid #c6c6c6;
+    border: 1px solid #9e3aff;
     border-radius: 5px;
 }
 
@@ -33,10 +33,11 @@ body {
 }
 
 .chat__block.chat__block--odd {
-    background-color: #e9e9e9;
+    background-color: #fcddff;
 }
 
 .comment {
+    position: relative;
     text-align: center;
 }
 
@@ -49,7 +50,7 @@ body {
     height: 100px;
     margin-top: 15px;
     padding: 15px 20px;
-    border: 2px solid cornflowerblue;
+    border: 2px solid #8200ff;
     border-radius: 4px;
     text-align: left;
     overflow-x: auto;
@@ -64,5 +65,51 @@ body {
 }
 
 .comment__smile-btn {
-    display: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 22px;
+    height: 22px;
+    background: url('../image/icon-smile.svg') no-repeat center;
+    /*opacity: .7;*/
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+.comment__smile-btn:hover {
+    opacity: 1;
+}
+
+.comment__smile-btn.comment__smile-btn--active {
+    opacity: 1;
+}
+
+.smile-block {
+    position: absolute;
+    top: -40%;
+    left: 120%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 99px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    background-color: #f4caff;
+    border-radius: 5px;
+    border: 2px solid #af78bd;
+    cursor: default;
+}
+
+.smile-block__item {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.smile-block__item:nth-child(even) {
+    margin-right: 0;
 }
