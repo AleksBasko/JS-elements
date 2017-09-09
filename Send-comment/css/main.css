@@ -50,7 +50,7 @@ body {
     height: 100px;
     margin-top: 15px;
     padding: 15px 20px;
-    border: 2px solid #8200ff;
+    border: 2px solid #a850fd;
     border-radius: 4px;
     text-align: left;
     overflow-x: auto;
@@ -64,14 +64,18 @@ body {
     cursor: pointer;
 }
 
-.comment__smile-btn {
+.comment__smile {
     position: absolute;
     top: 15px;
     right: 15px;
     width: 22px;
     height: 22px;
+}
+
+.comment__smile-btn {
+    height: inherit;
     background: url('../image/icon-smile.svg') no-repeat center;
-    /*opacity: .7;*/
+    opacity: .7;
     transition: opacity .2s;
     cursor: pointer;
 }
@@ -80,15 +84,19 @@ body {
     opacity: 1;
 }
 
-.comment__smile-btn.comment__smile-btn--active {
+.comment__smile--active .comment__smile-btn {
     opacity: 1;
 }
 
+.comment__smile--active .smile-block {
+    display: flex;
+}
+
 .smile-block {
+    display: none;
     position: absolute;
     top: -40%;
     left: 120%;
-    display: flex;
     flex-wrap: wrap;
     width: 99px;
     padding-top: 10px;

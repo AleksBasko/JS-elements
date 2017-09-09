@@ -1,46 +1,20 @@
-// (function(){
-//     console.log('2423423');
-//
-//     showEmoji();
-//     commentSubmit();
-// }());
-//
-//
-// function commentSubmit() {
-//
-//     $(".comment-textarea").on("keydown", function(e) {
-//
-//         if (e.keyCode === 13) {
-//             e.preventDefault();
-//
-//             if (e.altKey === true) {
-//                 let contentText = $(this).html();
-//                 $(this).html(contentText + "<br><br>");
-//
-//             } else {
-//                 let contentValue = $(this).html();
-//                 $(this).parents('.form-comment').append('<textarea class="" value="'+contentValue+'" id="valueToSend">');
-//                 // $(this).parents('form').submit();
-//                 console.log($(contentValue));
-//             }
-//         }
-//     });
-// }
-//
-// function showEmoji() {
-//     $('.comment-smile__block--btn').click(function() {
-//         $(this).addClass('comment-smile__block--active');
-//
-//     });
-//     $('.comment-smile').click(function() {
-//         $(this).clone().appendTo( ".comment-textarea" );
-//         console.log($(this));
-//     });
-// }
+'use strict';
+
+function showSmile(_this, block) {
+    if(_this.classList.contains('comment__smile-btn--active')) {
+        _this.classList.remove('comment__smile-btn--active');
+        block.classList.remove('smile-block--active');
+    }
+    else {
+        _this.classList.add('comment__smile-btn--active');
+        block.classList.add('smile-block--active');
+    }
+}
 
 let SendComment = function () {
-    this.form = document.querySelector('.comment');
     this.chat = document.querySelector('.chat');
+    this.form = document.querySelector('.comment');
+    this.customText = document.querySelector('.comment__textarea')
     this.count = false;
 
     this.submitComment = function () {
@@ -48,7 +22,7 @@ let SendComment = function () {
         let submitBtn = document.querySelector('.comment__btn');
 
         submitBtn.addEventListener('click', function () {
-            let textSend = document.querySelector('.comment__textarea').innerText;
+            let textSend = _this.customText.innerText;
             let blockSend = document.createElement('textarea');
 
             blockSend.classList.add('visibility-hidden');
@@ -71,6 +45,29 @@ let SendComment = function () {
         })
     };
 
+    this.showMySmile = function() {
+        let smileBtn = this.form.querySelector('.comment__smile-btn');
+
+        smileBtn.addEventListener('click', function(){
+            if(this.parentNode.classList.contains('comment__smile--active')) {
+                this.parentNode.classList.remove('comment__smile--active');
+            }
+            else {
+                this.parentNode.classList.add('comment__smile--active');
+            }
+        });
+    };
+
+    this.addSmile = function() {
+       let smile = this.form.querySelectorAll('.smile-block__item');
+       for( let item of smile) {
+           item.addEventListener('click', function() {
+               let smileImg = this.getElementsByTagName('img');
+               smileImg.cloneNode();
+           })
+       }
+    };
+
     this.sendMessage = function (content) {
         let textMessage = content.value;
 
@@ -90,6 +87,7 @@ let SendComment = function () {
     };
 
     this.init = function () {
+        this.showMySmile();
         this.submitComment();
     };
 };
