@@ -14,15 +14,15 @@ function showSmile(_this, block) {
 let SendComment = function () {
     this.chat = document.querySelector('.chat');
     this.form = document.querySelector('.comment');
-    this.customText = document.querySelector('.comment__textarea')
+    this.customText = this.form.querySelector('.comment__textarea');
     this.count = false;
 
     this.submitComment = function () {
         let _this = this;
-        let submitBtn = document.querySelector('.comment__btn');
+        let submitBtn = this.form.querySelector('.comment__btn');
 
         submitBtn.addEventListener('click', function () {
-            let textSend = _this.customText.innerText;
+            let textSend = _this.customText.innerHTML;
             let blockSend = document.createElement('textarea');
 
             blockSend.classList.add('visibility-hidden');
@@ -60,12 +60,14 @@ let SendComment = function () {
 
     this.addSmile = function() {
        let smile = this.form.querySelectorAll('.smile-block__item');
+       let _this = this;
        for( let item of smile) {
            item.addEventListener('click', function() {
-               let smileImg = this.getElementsByTagName('img');
-               smileImg.cloneNode();
+               let smileImg = this.querySelector('.smile-block__img');
+               _this.customText.appendChild(smileImg.cloneNode(true));
            })
        }
+
     };
 
     this.sendMessage = function (content) {
@@ -80,7 +82,7 @@ let SendComment = function () {
         let messageSpan = document.createElement('span');
         messageSpan.classList.add('chat__comment');
 
-        messageSpan.innerText = textMessage;
+        messageSpan.innerHTML = textMessage;
         messageBlock.appendChild(messageSpan);
 
         this.chat.appendChild(messageBlock);
@@ -88,6 +90,7 @@ let SendComment = function () {
 
     this.init = function () {
         this.showMySmile();
+        this.addSmile();
         this.submitComment();
     };
 };
