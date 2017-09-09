@@ -31,7 +31,7 @@ let SendComment = function () {
             _this.form.appendChild(blockSend);
             // console.log(textSend);
 
-            _this.sendMessage(blockSend);
+            _this.getMessage(blockSend);
 
             if (_this.count) {
                 _this.count = false;
@@ -70,7 +70,7 @@ let SendComment = function () {
 
     };
 
-    this.sendMessage = function (content) {
+    this.getMessage = function (content) {
         let textMessage = content.value;
 
         let messageBlock = document.createElement('div');
