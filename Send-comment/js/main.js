@@ -1,16 +1,5 @@
 'use strict';
 
-function showSmile(_this, block) {
-    if(_this.classList.contains('comment__smile-btn--active')) {
-        _this.classList.remove('comment__smile-btn--active');
-        block.classList.remove('smile-block--active');
-    }
-    else {
-        _this.classList.add('comment__smile-btn--active');
-        block.classList.add('smile-block--active');
-    }
-}
-
 let SendComment = function () {
     this.chat = document.querySelector('.chat');
     this.form = document.querySelector('.comment');
