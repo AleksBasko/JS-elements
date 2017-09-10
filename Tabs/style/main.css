@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #FFE0E8
+}
+
+.container {
+    width: 80%;
+    margin: 8% auto
+}
+
+.hidden {
+    display: none
+}
+
+.tab-block {
+    width: 500px;
+    height: 270px;
+    background-color: #FFEAF5;
+    margin: 0 auto;
+    border: 3px solid #fff;
+    padding: 15px 30px;
+    margin-bottom: 40px;
+    overflow: hidden
+}
+
+.tab-block.tab-second {
+    height: auto
+}
+
+.tab-nav {
+    padding-bottom: 25px
+}
+
+.tab-btn {
+    color: #fff;
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.4;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-width: 2px;
+    border-style: solid
+}
+
+.tab-btn.tab-btn--active {
+    cursor: default
+}
+
+.tab-btn:nth-child(1) {
+    background-color: #EB73FF;
+    border-color: #EB73FF
+}
+
+.tab-btn:nth-child(1).tab-btn--active {
+    border-color: #dc0dff
+}
+
+.tab-btn:nth-child(2) {
+    background-color: #FF9185;
+    border-color: #FF9185
+}
+
+.tab-btn:nth-child(2).tab-btn--active {
+    border-color: #ff351f
+}
+
+.tab-btn:nth-child(3) {
+    background-color: #7ACF7D;
+    border-color: #7ACF7D
+}
+
+.tab-btn:nth-child(3).tab-btn--active {
+    border-color: #3ca740
+}
+
+.tab-btn:nth-child(4) {
+    background-color: #92AFFF;
+    border-color: #92AFFF
+}
+
+.tab-btn:nth-child(4).tab-btn--active {
+    border-color: #2c64ff
+}
+
+.tab-content__wrapp .tab-content {
+    display: none
+}
+
+.tab-content__wrapp .tab-content.tab-content--active {
+    display: block
+}
