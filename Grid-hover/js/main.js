@@ -1,6 +1,7 @@
 window.onload = function() {
     heightGrid();
     hideHover();
+    hidePreloader();
 };
 
 window.addEventListener('resize', function() {
@@ -40,4 +41,9 @@ function hideHover() {
             }
         });
     }
+}
+
+function hidePreloader() {
+    let preloader = document.querySelector('.preloader');
+    preloader.style.display = 'none';
 }

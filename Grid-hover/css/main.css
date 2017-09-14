@@ -1,46 +1,62 @@
 * {
-  box-sizing: border-box; }
+    box-sizing: border-box;
+}
 
 body {
-  padding: 0;
-  margin: 0;
-  font-family: Verdana, Tahom, sans-serif; }
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Tahom, sans-serif;
+}
 
 .container {
-  width: 80%;
-  margin: 0 auto 100px;
-  padding-top: 100px; }
+    width: 80%;
+    margin: 0 auto 100px;
+    padding-top: 100px;
+}
 
-.plreloader {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  z-index: 1000; }
-  .plreloader .preloader__img {
-    background: url("../image/preloader/preloader.svg") no-repeat center; }
+.preloader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+.preloader .preloader__img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: url("../image/preloader/preloader.svg") no-repeat center;
+}
 
 .grid-shad {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
-  .grid-shad .grid-shad__item {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.grid-shad .grid-shad__item {
     position: relative;
     width: 32.5%;
     height: auto;
     margin-bottom: 1.25%;
-    cursor: pointer; }
-  .grid-shad .grid-shad__block {
+    cursor: pointer;
+}
+
+.grid-shad .grid-shad__block {
     position: absolute;
     top: 0;
     left: 0;
@@ -48,45 +64,57 @@ body {
     height: 100%;
     background-color: #ccc;
     transition: opacity .5s;
-    opacity: 0; }
-  .grid-shad .grid-shad__item--hide .grid-shad__block {
-    opacity: 0.8; }
-  .grid-shad .grid-shad__img {
+    opacity: 0;
+}
+
+.grid-shad .grid-shad__item--hide .grid-shad__block {
+    opacity: 0.8;
+}
+
+.grid-shad .grid-shad__img {
     display: block;
     max-width: 100%;
-    min-height: 100%; }
+    min-height: 100%;
+}
 
 .grid-zoom {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
-  .grid-zoom .grid-zoom__item {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.grid-zoom .grid-zoom__item {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     background-color: coral;
     width: 24.5%;
     margin-bottom: .5%;
     overflow: hidden;
-    cursor: pointer; }
-    .grid-zoom .grid-zoom__item:hover .grid-zoom__img {
-      -webkit-transform: scale(1.3, 1.3);
-          -ms-transform: scale(1.3, 1.3);
-              transform: scale(1.3, 1.3); }
-  .grid-zoom .grid-zoom__img {
+    cursor: pointer;
+}
+
+.grid-zoom .grid-zoom__item:hover .grid-zoom__img {
+    -webkit-transform: scale(1.3, 1.3);
+    -ms-transform: scale(1.3, 1.3);
+    transform: scale(1.3, 1.3);
+}
+
+.grid-zoom .grid-zoom__img {
     width: 100%;
     transition: -webkit-transform 1s ease-out;
     transition: transform 1s ease-out;
-    transition: transform 1s ease-out, -webkit-transform 1s ease-out; }
+    transition: transform 1s ease-out, -webkit-transform 1s ease-out;
+}
