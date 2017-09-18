@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    color: #444;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+p {
+    margin-top: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto 100px;
+    padding-top: 100px;
+}
+
+.registr-form {
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+    padding: 30px 24px;
+    background-color: #fff;
+    border: 2px solid cornflowerblue;
+    border-radius: 4px;
+}
+
+.registr-form__title {
+    font-size: 16px;
+    font-weight: bold;
+    color: cornflowerblue;
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.registr-form__btn-wrap {
+    width: 160px;
+    padding: 0 15px;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    text-align: center;
+    -webkit-transform: translateX(-80px);
+    -ms-transform: translateX(-80px);
+    transform: translateX(-80px);
+    background-color: white;
+}
+
+.registr-form__btn {
+    width: 130px;
+    font-size: 16px;
+    line-height: 38px;
+    border: none;
+    border-width: 0;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    background-color: cornflowerblue;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.registr-form__btn:hover {
+    background-color: #437bdf;
+}
+
+.registr-form__btn[disabled] {
+    background-color: #a7bfe8;
+    cursor: no-drop;
+}
+
+.registr-form__btn[disabled]:hover {
+    background-color: #a7bfe8;
+}
+
+.registr-form__input {
+    width: 100%;
+    border-color: transparent;
+    border-bottom: 1px solid #444;
+    font-size: 14px;
+    padding: 15px 0 3px;
+    outline-width: 0;
+}
+
+.registr-form__label {
+    font-size: 12px;
+    line-height: 1;
+    color: grey;
+    margin-bottom: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: text;
+    white-space: nowrap;
+    pointer-events: none;
+    -webkit-transform-origin: left center;
+    -ms-transform-origin: left center;
+    transform-origin: left center;
+    -webkit-transform: scale(1.25) translateY(14px);
+    -ms-transform: scale(1.25) translateY(14px);
+    transform: scale(1.25) translateY(14px);
+    transition: all .2s ease;
+    z-index: 1;
+}
+
+.registr-form__row {
+    position: relative;
+    margin-bottom: 14px;
+}
+
+.registr-form__row.input-active .registr-form__label {
+    -webkit-transform: scale(1) translateY(0);
+    -ms-transform: scale(1) translateY(0);
+    transform: scale(1) translateY(0);
+}
+
+.registr-form__password-wrap {
+    position: relative;
+}
+
+.registr-form__password-wrap .registr-form__input {
+    padding-right: 35px;
+}
+
+.registr-form__password-wrap .registr-form__password-icon {
+    position: absolute;
+    right: 8px;
+    top: 15px;
+    height: 15px;
+    width: 25px;
+    background: url("../image/icons/eye-closed.svg") no-repeat center bottom;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.registr-form__password-wrap .registr-form__password-icon.registr-form__password-icon--active {
+    background: url("../image/icons/eye.svg") no-repeat center bottom;
+    background-size: contain;
+}
+
+input[type=password]::-ms-reveal {
+    display: none;
+}
