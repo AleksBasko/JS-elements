@@ -53,15 +53,18 @@ let LogObj = function (id) {
 
         if (this.inputCount === inputList.length) {
             this.formBtn.removeAttribute('disabled');
+            this.inputCount = 0;
         }
         else {
             this.inputCount = 0;
             this.formBtn.setAttribute("disabled", "disabled");
         }
     };
+
     this.show = function () {
         this.form.classList.remove('preloader');
     };
+
     this.showPass = function () {
         let _this = this;
         let passBtn = this.form.querySelector('.registr-form__password-icon');
@@ -76,16 +79,19 @@ let LogObj = function (id) {
 
             let passInput = passParent.querySelector('.registr-form__input');
 
-            if (_this.passActive) {
-                passInput.setAttribute('type', 'password');
-                this.classList.remove('registr-form__password-icon--active');
-                _this.passActive = false;
+            if(passInput.value) {
+                if (_this.passActive) {
+                    passInput.setAttribute('type', 'password');
+                    this.classList.remove('registr-form__password-icon--active');
+                    _this.passActive = false;
+                }
+                else {
+                    passInput.setAttribute('type', 'text');
+                    this.classList.add('registr-form__password-icon--active');
+                    _this.passActive = true;
+                }
             }
-            else {
-                passInput.setAttribute('type', 'text');
-                this.classList.add('registr-form__password-icon--active');
-                _this.passActive = true;
-            }
+
 
         });
     };
