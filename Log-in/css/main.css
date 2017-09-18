@@ -19,6 +19,10 @@ p {
     padding-top: 100px;
 }
 
+.preloader {
+    opacity: 0;
+}
+
 .registr-form {
     position: relative;
     width: 300px;
