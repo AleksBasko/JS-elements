@@ -91,8 +91,6 @@ let LogObj = function (id) {
                     _this.passActive = true;
                 }
             }
-
-
         });
     };
 
