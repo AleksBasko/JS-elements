@@ -1,4 +1,5 @@
 * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -45,14 +46,14 @@ h1, h2, h3, p {
 }
 
 .cc-header {
-    display: -webkit-flex;
     display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
-    -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
+    -webkit-box-pack: justify;
     justify-content: space-between;
-    -webkit-align-items: center;
     -ms-flex-align: center;
+    -webkit-box-align: center;
     align-items: center;
     height: 55px;
     padding: 0 24px;
@@ -69,14 +70,14 @@ h1, h2, h3, p {
 }
 
 .cc-nav__list {
-    display: -webkit-flex;
     display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
-    -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
+    -webkit-box-pack: justify;
     justify-content: space-between;
-    -webkit-align-items: center;
     -ms-flex-align: center;
+    -webkit-box-align: center;
     align-items: center;
     height: inherit;
     margin: 0;
@@ -122,11 +123,11 @@ h1, h2, h3, p {
 /* ======================== */
 /* ------------------------ */
 .cc-mail-block {
-    display: -webkit-flex;
     display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
-    -webkit-justify-content: center;
     -ms-flex-pack: center;
+    -webkit-box-pack: center;
     justify-content: center;
 }
 
@@ -152,11 +153,11 @@ h1, h2, h3, p {
 
 /* ======================== */
 .cc-row {
-    display: -webkit-flex;
     display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
-    -webkit-justify-content: center;
     -ms-flex-pack: center;
+    -webkit-box-pack: center;
     justify-content: center;
 }
 
@@ -167,8 +168,8 @@ h1, h2, h3, p {
 }
 
 .cc-them {
-    display: -webkit-flex;
     display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
 }
 
@@ -183,11 +184,11 @@ h1, h2, h3, p {
 /* ------------------------ */
 /* ======================== */
 .cc-pricing {
-    display: -webkit-flex;
     display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
-    -webkit-justify-content: center;
     -ms-flex-pack: center;
+    -webkit-box-pack: center;
     justify-content: center;
 }
 
@@ -232,11 +233,14 @@ h1, h2, h3, p {
     display: block;
     width: 300px;
     border-bottom-left-radius: 5px;
+    -webkit-transition: right .7s;
+    -o-transition: right .7s;
     transition: right .7s;
 }
 
 .change-color.change-color--active {
     right: 0;
+    -webkit-box-shadow: -7px 5px 13px 0 rgba(0, 0, 0, 0.4);
     box-shadow: -7px 5px 13px 0 rgba(0, 0, 0, 0.4);
 }
 
@@ -273,6 +277,7 @@ h1, h2, h3, p {
     height: 50px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    -webkit-box-shadow: -6px 3px 8px -1px rgba(0, 0, 0, 0.4);
     box-shadow: -6px 3px 8px -1px rgba(0, 0, 0, 0.4);
     cursor: pointer;
 }
