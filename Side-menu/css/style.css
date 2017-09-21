@@ -1,0 +1,287 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px; }
+
+.row {
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 100vh; }
+
+.col {
+  width: 300px;
+  overflow: visible; }
+
+/* ----- left menu start ----- */
+.left-menu {
+  width: 100%;
+  padding: 30px 0;
+  background-color: #1c2024;
+  color: #fff;
+  border-bottom-right-radius: 5px;
+  box-shadow: 10px 9px 17px 2px rgba(0, 0, 0, 0.23);
+  opacity: 0; }
+  .left-menu .menu__list {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  .left-menu .menu__item {
+    position: relative;
+    transition: background-color .3s; }
+  .left-menu .menu__item .menu__item .menu__link {
+    padding-left: 62px; }
+  .left-menu .menu__list .menu__item:last-child {
+    padding-bottom: 0; }
+  .left-menu .menu__item > .menu__list {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .2s; }
+  .left-menu .menu__item.menu__item--active > .menu__link {
+    font-weight: 700;
+    background-color: #f68824;
+    color: #fff; }
+    .left-menu .menu__item.menu__item--active > .menu__link:hover {
+      background-color: #f68824;
+      color: #fff;
+      cursor: default; }
+  .left-menu .menu__item.menu__item--open {
+    background-color: #31363c; }
+  .left-menu .menu__item.menu__item--open > .menu__list {
+    max-height: 1000px;
+    transition: max-height 1s; }
+  .left-menu .menu__item.menu__item--open > .menu__list .menu__list {
+    background-color: #5a616a; }
+  .left-menu .menu__item.menu__item--open > .menu__list .menu__list .menu__link {
+    padding-left: 72px;
+    font-size: 14px;
+    padding-top: 12px;
+    padding-bottom: 12px; }
+  .left-menu .menu__btn {
+    position: absolute;
+    top: 14px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    background: url("../image/arrow-right.svg") no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+    transition: -webkit-transform .2s;
+    transition: transform .2s;
+    transition: transform .2s, -webkit-transform .2s;
+    z-index: 1; }
+  .left-menu .menu__link {
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+    line-height: 1;
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    padding-left: 40px;
+    transition: background-color .3s; }
+    .left-menu .menu__link:hover {
+      color: #f68824;
+      background-color: #fff; }
+  .left-menu .menu__item.menu__item--open > .menu__btn {
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg); }
+  .left-menu .menu__item .menu__item .menu__btn {
+    top: 13px;
+    left: 35px;
+    width: 16px;
+    height: 16px; }
+  .left-menu .menu__item .menu__item .menu__link {
+    font-size: 16px; }
+
+/* ----- left menu end ----- */
+/* ----- right menu start ----- */
+.right-menu {
+  width: 100%;
+  padding: 30px 0;
+  background-color: #00d291;
+  border-bottom-left-radius: 5px;
+  box-shadow: -7px 9px 17px 2px rgba(0, 0, 0, 0.23);
+  opacity: 0; }
+  .right-menu .menu__list {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  .right-menu .menu__item {
+    position: relative;
+    transition: background-color .3s; }
+  .right-menu .menu__link {
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    color: #000;
+    line-height: 1;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    transition: background-color .2s, box-shadow .2s; }
+    .right-menu .menu__link:hover {
+      background-color: #c9ff64;
+      box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12); }
+  .right-menu .menu__item > .menu__list {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .2s; }
+  .right-menu .menu__block {
+    position: relative; }
+    .right-menu .menu__block:after {
+      content: '';
+      position: absolute;
+      top: 9px;
+      left: 10px;
+      width: 20px;
+      height: 20px;
+      background: url("../image/arrow-left.svg") no-repeat center;
+      background-size: contain;
+      cursor: pointer;
+      transition: -webkit-transform .3s;
+      transition: transform .3s;
+      transition: transform .3s, -webkit-transform .3s; }
+  .right-menu .menu__item.menu__item--open {
+    background-color: #28f6c2; }
+  .right-menu .menu__item.menu__item--open > .menu__list {
+    max-height: 1000px;
+    transition: max-height 1s; }
+  .right-menu .menu__item > .menu__list .menu__link {
+    padding-left: 62px;
+    font-size: 16px; }
+  .right-menu .menu__item.menu__item--open > .menu__list .menu__list .menu__link {
+    padding-left: 72px;
+    font-size: 14px;
+    padding-top: 12px;
+    padding-bottom: 12px; }
+  .right-menu .menu__item.menu__item--open > .menu__list .menu__list {
+    background-color: #a8fee8; }
+  .right-menu .menu__item--open > .menu__block:after {
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg); }
+  .right-menu .menu__item .menu__list .menu__block:after {
+    top: 10px;
+    left: 35px;
+    width: 16px;
+    height: 16px; }
+  .right-menu .menu__item.menu__item--active > .menu__link {
+    font-weight: 700;
+    background-color: #30b7d7;
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12); }
+
+/* ----- right menu end ----- */
+/* ----- central menu start ----- */
+.central-menu {
+  width: 100%;
+  padding: 30px 0;
+  background-color: #677ef2;
+  color: #fff;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: 0 5px 6px -3px rgba(0, 0, 0, 0.2), 0 9px 12px 1px rgba(0, 0, 0, 0.14), 0 3px 16px 2px rgba(0, 0, 0, 0.12);
+  opacity: 0; }
+
+.central-menu__list {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+.central-menu__item {
+  position: relative;
+  transition: background-color .3s; }
+
+.central-menu__item .central-menu__item .central-menu__link {
+  padding-left: 62px; }
+
+.central-menu__list .central-menu__item:last-child {
+  padding-bottom: 0; }
+
+.central-menu__item > .central-menu__list {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .2s; }
+
+.central-menu__item.central-menu__item--active > .central-menu__link {
+  font-weight: 700;
+  background-color: #3346a5;
+  color: #fff; }
+  .central-menu__item.central-menu__item--active > .central-menu__link:hover {
+    background-color: #3346a5;
+    color: #fff;
+    cursor: default; }
+
+.central-menu__item.central-menu__item--open {
+  background-color: #33b2e8; }
+
+.central-menu__item.central-menu__item--open > .central-menu__list {
+  max-height: 1000px;
+  transition: max-height 1s; }
+
+.central-menu__item.central-menu__item--open > .central-menu__list .central-menu__list {
+  background-color: #1ecae5; }
+
+.central-menu__item.central-menu__item--open > .central-menu__list .central-menu__list .central-menu__link {
+  padding-left: 72px;
+  font-size: 14px;
+  padding-top: 12px;
+  padding-bottom: 12px; }
+
+.central-menu__btn {
+  position: absolute;
+  top: 14px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  background: url("../image/arrow-central.svg") no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+  z-index: 1; }
+
+.central-menu__link {
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+  line-height: 1;
+  padding-top: 15px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  padding-left: 40px;
+  transition: background-color .3s; }
+  .central-menu__link:hover {
+    color: #3346a5;
+    background-color: #fff; }
+
+.central-menu__item.central-menu__item--open > .central-menu__btn {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg); }
+
+.central-menu__item .central-menu__item .central-menu__btn {
+  top: 13px;
+  left: 35px;
+  width: 16px;
+  height: 16px; }
+
+.central-menu__item .central-menu__item .central-menu__link {
+  font-size: 16px; }
+
+/* ----- central menu end ----- */
