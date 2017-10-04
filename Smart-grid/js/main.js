@@ -1,5 +1,6 @@
 
 'use strict';
+console.log('click');
 $(document).ready(function () {
     function dictMoving() {
         var item = $('.dict-item__wrapp'),
