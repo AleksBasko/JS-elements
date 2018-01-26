@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto 100px;
+  padding-top: 100px;
+}
