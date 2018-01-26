@@ -13,3 +13,31 @@ body {
   margin: 0 auto 100px;
   padding-top: 100px;
 }
+
+.select__hide {
+  border: 0!important;
+  clip: rect(0 0 0 0)!important;
+  clip-path: inset(50%)!important;
+  height: 0!important;
+  overflow: hidden!important;
+  padding: 0!important;
+  position: absolute!important;
+  width: 0!important;
+  white-space: nowrap!important;
+}
+
+.ss__block {
+  position: relative;
+}
+
+.ss__box-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.ss__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
