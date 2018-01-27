@@ -10,8 +10,13 @@ body {
 
 .container {
   width: 80%;
+  display: flex;
   margin: 0 auto 100px;
   padding-top: 100px;
+}
+
+.select-wrap  {
+  width: 200px;
 }
 
 .select__hide {

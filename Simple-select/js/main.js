@@ -1,7 +1,10 @@
 class Select {
-  constructor(block, select = 'select') {
-    this.blockId = block;
-    this.selectId = select;
+  constructor(args) {
+    this.blockId = args.block;
+    this.selectId = args.select || 'select';
+    this.animate = args.animate || false;
+    this.speed = args.speed || "300px";
+
     this.blockWrap = document.querySelector(this.blockId);
     this.startSelect = this.blockWrap.querySelector(this.selectId);
     this.optionList = this.startSelect.querySelectorAll('option');
@@ -11,8 +14,30 @@ class Select {
     this.csBlockList = document.createElement('div');
     this.csList = document.createElement('ul');
     this.activeItem = 0;
-    // this.heightBlock = 300;
-    // this.heightItem = 0;
+  }
+
+  clickOutEv(even) {
+    let isSelect = false;
+    let clickBlock = even.target;
+
+    while (clickBlock.tagName !== 'HTML') {
+
+      if (clickBlock.classList.contains("ss__block")) {
+        isSelect = true;
+        break;
+      }
+      clickBlock = clickBlock.parentElement;
+    }
+
+    if (!isSelect) {
+      this.close();
+    }
+  };
+
+  clickOut() {
+    document.addEventListener('click', (e) => {
+      this.clickOutEv(e);
+    });
   }
 
   create() {
@@ -45,6 +70,10 @@ class Select {
     this.csBlock.appendChild(this.csBlockList);
     this.blockWrap.appendChild(this.csBlock);
     this.csBlock.insertBefore(this.csMain, this.csBlockList);
+    if (!this.animate) {
+      this.csBlockList.style.display = 'none';
+      this.csBlockList.style.height = 'auto';
+    }
   }
 
   createFirst() {
@@ -90,13 +119,23 @@ class Select {
 
   open() {
     this.csMain.addEventListener('click', () => {
-      if ( this.csBlock.classList.contains('ss__block--open') ) {
+      if (this.csBlock.classList.contains('ss__block--open')) {
         this.csBlock.classList.remove('ss__block--open');
-        this.csBlockList.style.height = '0px';
-      }
-      else {
-        this.csBlock.classList.toggle('ss__block--open');
-        this.calcHeight();
+
+        if (this.animate) {
+          this.csBlockList.style.height = '0px';
+        } else {
+          this.csBlockList.style.display = 'none';
+        }
+
+      } else {
+        this.csBlock.classList.add('ss__block--open');
+
+        if (this.animate) {
+          this.calcHeight();
+        } else {
+          this.csBlockList.style.display = 'block';
+        }
       }
     })
   }
@@ -110,8 +149,17 @@ class Select {
     this.create();
     this.createFirst();
     this.open();
+    this.clickOut()
   }
 }
 
-let SimpleSelect = new Select('.simple-select');
+let SimpleSelect = new Select({
+  block: '.simple-select',
+  animate: true
+});
 SimpleSelect.init();
+
+let SecondSelect = new Select({
+  block: '.second-select'
+});
+SecondSelect.init();
