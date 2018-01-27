@@ -5,7 +5,7 @@ class Select {
     this.animate = args.animate || false;
     this.speed = args.speed || "300px";
 
-    this.blockWrap = document.querySelector(this.blockId);
+    this.blockWrap = document.querySelector('.' + this.blockId);
     this.startSelect = this.blockWrap.querySelector(this.selectId);
     this.optionList = this.startSelect.querySelectorAll('option');
     this.csMain = document.createElement('div');
@@ -22,7 +22,7 @@ class Select {
 
     while (clickBlock.tagName !== 'HTML') {
 
-      if (clickBlock.classList.contains("ss__block")) {
+      if (clickBlock.classList.contains(this.blockId)) {
         isSelect = true;
         break;
       }
@@ -135,6 +135,7 @@ class Select {
           this.calcHeight();
         } else {
           this.csBlockList.style.display = 'block';
+          this.csBlockList.style.height = 'auto';
         }
       }
     })
@@ -154,12 +155,12 @@ class Select {
 }
 
 let SimpleSelect = new Select({
-  block: '.simple-select',
+  block: 'simple-select',
   animate: true
 });
 SimpleSelect.init();
 
 let SecondSelect = new Select({
-  block: '.second-select'
+  block: 'second-select'
 });
 SecondSelect.init();
