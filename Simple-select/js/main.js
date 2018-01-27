@@ -3,7 +3,7 @@ class Select {
     this.blockId = args.block;
     this.selectId = args.select || 'select';
     this.animate = args.animate || false;
-    this.speed = args.speed || "300px";
+    this.speed = args.speed || "300";
 
     this.blockWrap = document.querySelector('.' + this.blockId);
     this.startSelect = this.blockWrap.querySelector(this.selectId);
@@ -115,6 +115,7 @@ class Select {
   calcHeight() {
     let listHeight = this.csList.offsetHeight;
     this.csBlockList.style.height = listHeight + 'px';
+    this.csBlockList.style.transitionDuration = this.speed + 'ms';
   }
 
   open() {
@@ -164,3 +165,10 @@ let SecondSelect = new Select({
   block: 'second-select'
 });
 SecondSelect.init();
+
+let ThirdSelect = new Select({
+  block: 'third-select',
+  animate: true,
+  speed: 2000
+});
+ThirdSelect.init();
