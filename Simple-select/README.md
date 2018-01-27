@@ -1,5 +1,5 @@
 
-<a href="https://dev.aleksbasko.com/pages/Simple-selecet/">**https://dev.aleksbasko.com/pages/Simple-selecet/**</a>
+<a href="http://dev.aleksbasko.com/pages/Simple-selecet/">**http://dev.aleksbasko.com/pages/Simple-selecet/**</a>
 ### Simple select
 Простой класс для стилизации _select_.
 Не использует никаких библиотек.
