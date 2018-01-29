@@ -9,6 +9,7 @@ for ( let i=0; i < weInput.length; i++ ) {
     let keySymbol = String.fromCharCode(keyCode);
     let rep = /[-\.;":'a-zA-Zа-яА-Я]/;
     if (rep.test(keySymbol)) {
+      console.log('ffff');
         return false;
     }
     else {
