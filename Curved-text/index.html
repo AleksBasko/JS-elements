@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="crt-header">
+        <label class="crt-header__label" for="text">Текст заголовка</label>
+        <input id="text" type="text" placeholder="Some Text">
+        <label class="crt-header__label" for="rotate">Вращение текста</label>
+        <input id="rotate" type="number" placeholder="-44">
+        <label class="crt-header__label" for="width">Диаметр круга</label>
+        <input id="width" type="number" placeholder="550">
+        <label class="crt-header__label" for="angle">Угол наклона</label>
+        <input id="angle" type="number" placeholder="10">
+        <button id="check">Check</button>
+    </header>
+
+    <p class="crt-result-func">
+        Function and parameters
+        <span>curvedText(id,&nbsp;</span>
+        <span id="rotateFunc"></span>,&nbsp;
+        <span id="angleFunc"></span>,&nbsp;
+        <span id="widthFunc"></span>
+        );
+    </p>
+    <div class="crt-result">
+        <div id="textInner" class="crt-result__text"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

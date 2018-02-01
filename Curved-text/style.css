@@ -1,0 +1,54 @@
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/* curver-text */
+
+.crt-header {
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 25px;
+}
+
+.crt-result-func {
+    height: 40px;
+    margin: 0;
+    padding: 0 25px;
+    font-weight: bold;
+}
+
+.crt-header__label {
+    padding: 0 15px;
+}
+
+.crt-header__label:first-child {
+    padding-left: 0;
+}
+
+.crt-result__text {
+    position: relative;
+    width: auto;
+    border-radius: 50%;
+}
+
+.crt-letter {
+    font: 45px Monaco, MonoSpace;
+    position: absolute;
+    width: 20px;
+    left: 0;
+    top: 0;
+    transform-origin: bottom center;
+    font-weight:bold;
+}
+
+.crt-result {
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
