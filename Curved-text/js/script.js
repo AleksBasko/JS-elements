@@ -63,28 +63,3 @@
     }
 
 }());
-
-
-// (function() {
-//     function curvedText(id, angle, width, rotate) {
-//
-//         var textInner = document.getElementById( id );
-//         var textVal = textInner.innerHTML;
-//         var angleVal = angle;
-//         var widthVal = width;
-//         var rotateVal = rotate;
-//         textInner.innerHTML = '';
-//         textInner.style.transform = 'rotate(' + rotateVal + 'deg)';
-//
-//         for (var i = 0; i < textVal.length; i++) {
-//             var span = document.createElement('span');
-//             span.innerHTML = textVal[i];
-//             span.style.transform = 'rotate(' + angleVal * i + 'deg)';
-//             span.style.height = widthVal/2 + 'px';
-//
-//             textInner.appendChild(span);
-//         }
-//     }
-//     curvedText('ssw', 12, 400, -44);
-//
-// }());
